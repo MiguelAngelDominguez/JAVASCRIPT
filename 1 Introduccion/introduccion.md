@@ -72,3 +72,19 @@ Un script interno se declara en el head en la etiqueta script, aunque es mas rec
 ```
 
 #### Script Externo
+
+Un script externo se declara tambien con la etiqueta script, pero a diferecia del script interno, este recibe un  atributo 'src="./ubicacion"', la etiqueta script puede ser incluido en el head o en el body, pero lo recomendado es declararlo en el body.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>30DíasDeJS:Scripts Externos</title>
+    </head>
+    <body>
+    //Podría estar en la cabecera o en el cuerpo...
+    // Aquí está el lugar recomendado para poner el script externo
+    <script src="introduction.js"></script>
+    </body>
+</html>
+```
