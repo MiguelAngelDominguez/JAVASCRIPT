@@ -1,5 +1,17 @@
 # Introducción
 
+## JavaScript
+
+JS es un lenguaje interpretado, que es ejecutado directamente en el navagdor, que tiene una herramienta llamada interprete que lo traduce en tiempo real.
+
+Ademas JS es un lenguaje orientado a objetos, que incluye todas las caracteristicas de POO.
+
+JS es muy sencible a mayusculas y minusculas (Upper and Lower case sentitive).
+
+Es de Tipado debil, lo que significa que las variables se adapta a su valor insgresdo.
+
+JS es un lenguaje dinamico.
+
 ### console.log()
 
 Es una funciona que imprime por la consola del navegador lo que ingresamos.
@@ -73,7 +85,7 @@ Un script interno se declara en el head en la etiqueta script, aunque es mas rec
 
 #### Script Externo
 
-Un script externo se declara tambien con la etiqueta script, pero a diferecia del script interno, este recibe un  atributo 'src="./ubicacion"', la etiqueta script puede ser incluido en el head o en el body, pero lo recomendado es declararlo en el body.
+Un script externo se declara tambien con la etiqueta script, pero a diferecia del script interno, este recibe un  atributo 'src="./ubicacion"', la etiqueta script puede ser in cluido en el head o en el body, pero lo recomendado es declararlo en el body.
 
 ```html
 <!DOCTYPE html>
