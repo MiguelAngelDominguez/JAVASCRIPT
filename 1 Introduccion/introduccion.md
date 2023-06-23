@@ -88,3 +88,41 @@ Un script externo se declara tambien con la etiqueta script, pero a diferecia de
     </body>
 </html>
 ```
+
+## Variables
+
+las variables son cajas,o mejor dicho espacios en memoria que nos permiten guardar un dato en el tiempo deejecucion, este dato puede ser un string, numero, boolean, etc.
+
+Para declarar una variable en js usaremos las palabras reservadas *let, var y const*. 
+
+Si la variable cambia de valor cada cierto tiempo usaremos lef, pero si su valor es constante como pi o la grabedad, usaremos `const`.
+
+Para declarar una variable en js, se siguen los siguientes pasos:
+
+- El nombre de la variable no puede comenzar por un numero.
+- El nombre de una variable no permite caracteres especiales excepto el signo de dólar y el guion abajo.
+- el nombre de las variables siguen la convención 'camelCase'.
+- No se aceptan espacios entre palabras en el nombre de la variable.
+
+Variables válidas
+
+```javascript
+primerNombre
+apellido
+ciudadCapital
+estaCasado
+
+nombre_de_pila
+num
+num_1
+$num
+año_2023
+```
+
+Variables inválidas
+
+```javascript
+primer-video
+1_numero
+num_#_1
+```
