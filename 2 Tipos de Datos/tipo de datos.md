@@ -18,7 +18,7 @@ Los datos de tipo primitivos en JS incluyen:
 
 Los datos primitivos  son tipos de datos inmutables, una vez declarados no se pueden modificar.
 
-Ejemplo: 
+Ejemplo:
 
 ```javascript
 let word = "hola amigo";
@@ -30,9 +30,11 @@ si intentamos modificar algun caracter de este mismo, no devolvera un error; acl
 word[0] = "y";
 ```
 
+---
+
 ### String
 
-Un String son cadenas de texto.
+Un String son cadenas de texto, que estan englobadas por comillas simples, dobles o triples
 
 ```javascript
 mi_string = "mi cadena de texto"
@@ -47,6 +49,62 @@ La palabra contatenación hace referencia en programacion de unir o conectar, do
 let nombreCompleto = primerNommbre + " " + Apellido; // para contatenar se usa el operado + unir los strigs
 console.log(nombreCompleto);
 ```
+
+##### Concatenar usando el operador suma
+
+Esta forma es la mas clasica de concatenar varias cadenas de codigo, pero es de las mas tediosa y propensa de errores.
+
+```javascript
+let primerNombre = "Miguel";
+let espacio = " ";
+let apellido = "Dominguez";
+
+let nombreCompleto = primerNombre + espacio + apellido;
+
+console.log(nombreCompleto);
+```
+
+##### Cadenas literales largas
+
+Podemos unir una cadena de varias lineas, señalando con '\\' que el texto sigue en la siguiente linea.
+
+```javascript
+const parrafo =
+"Mi nombre es Asabeneh Yetayeh. Vivo en Finlandia, Helsinki.\
+Soy profesora y me encanta enseñar. Enseño HTML, CSS, JavaScript, React, Redux, \
+Node.js, Python, Data Analysis y D3.js para cualquier persona interesada en aprender. \
+A fines de 2019, estaba pensando en expandir mi enseñanza y llegar a \
+a la audiencia global y comencé un desafío de Python del 20 de noviembre al 19 de diciembre.\
+Fue una de las experiencias más gratificantes e inspiradoras.\
+Ahora, estamos en 2020. Disfruto preparando el desafío 30DaysOfJavaScript y \
+Espero que tú también estés disfrutando.";
+
+console.log(parrafo);
+```
+
+##### Literales de Plantilla
+
+Son cadenas de texto donde podemos inyectar datos como expresiones dentro de cadena, gracias a `${dato_1}`.
+
+```javascript
+let a = 2 ;
+let b = 3;
+
+cosole.log('la suam de ${a} y ${b} es ${a+b}')
+```
+
+### Secuencia de Escape de Cadenas
+
+Son `\ mas algunos caractere` que se usan para salir del flujo normal de una cadena de texto y hacer ciertas cosas.
+
+* \n salto de linea
+* \\\Barra inertida
+* \\' una comilla
+* \\" comillas doble+
+
+### Métodos de Cadena
+
+---
 
 ### Numerico
 
