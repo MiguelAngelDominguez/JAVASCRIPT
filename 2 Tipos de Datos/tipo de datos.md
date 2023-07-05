@@ -104,11 +104,235 @@ Son `\ mas algunos caractere` que se usan para salir del flujo normal de una cad
 
 ### Métodos de Cadena
 
----
+#### length
+
+El metodos length se utiliza para devolver el numero de caracteres de una cadena, incluyendo espacios.
+
+```javascript
+let texto = "hola mundo";
+console.log(texto.length); //10
+// la variable texto tiene un total de 10 caracteres
+```
+
+#### Acceder a lo caracteres de la cadena
+
+podemos acceder a una cadea usando su indice, el conteo del indice de una cadean comienza en 0
+
+![1688484200477](image/tipodedatos/1688484200477.png)
+
+```javascript
+let string = "Hola Juan";
+let firstLeter = string[0];
+
+console.log(firstLeter); // H
+```
+
+#### toUpperCase()
+
+Este metodo cambia la cadena a letras mayúsculas.
+
+```javascript
+let string = "hola mundo";
+console.log(string.toUpperCase()); // HOLA MUNDO
+```
+
+#### toLowerCase()
+
+Este metodo cambia la cadena a letras minusculas.
+
+```javascript
+let string = "HOLA MUNDO";
+console.log(string.toLowerCase()); // hola mundo
+```
+
+#### substr()
+
+Este metodo devuelve una parte de la cadena original, para esto necesitamos dos argumentos, el indice incial y la longitud de la cadena.
+
+```javascript
+let string = "hola mundo";
+console.log(string.substr(4,8));
+```
+
+#### slice()
+
+El metodo slice tambien extrae un subcadena, pero a diferencia del metodo substr, este nesecita el indice inicial y final.
+
+```javascript
+let miString = "Hola mundo";
+console.log(miString.slice(1,4)); // ola
+```
+
+#### split()
+
+El metodo split divide la cadena en partes segun un carecter indicado.
+
+```javascript
+let string = "30 dias con javascript";
+console.log(string.split(" ")); // Se van a separar la cadena segun el caracter " ", el resultado se guadara en un array;
+// ["30","dias","con","javascript"]
+```
+
+#### trim()
+
+Elimina los espacio del final y del comiezo de una cadena.
+
+```javascript
+let string = "  hola mundo  ";
+console.log(string); //   hola mundo  
+console.log(string.trim()); // hola mundo
+```
+
+#### includes()
+
+Toma el argumento ingresado y verifica que la cadena ingresada exista como subcadena en la cadena principal.
+
+```javascript
+let string = "hola mundo";
+
+console.log(string.includes("ho")); // True
+console.log(string.includes("halo")); // False
+```
+
+#### replace()
+
+El metodo replace remplanza una subcadena por otra subcadena que esta en la cadena principal
+
+```javascript
+let string = "hola mundo";
+
+console.log(string.replace("hola","chao"));
+// chao mundo
+```
+
+#### indexOf()
+
+Este metodo toma una cadena o caracter y busca si esta existe en la cadena principal, y devuelve la primera posicion de donde esta ubicada.
+
+```javascript
+let string = "Hola mundo";
+
+console.log(string.index.Of("ola")); /1
+```
+
+Recordar que este metodo se usa solo para datos tipo String.
+
+#### lastIndexOf()
+
+Toma una subcadena y la busca en una cadena, devuelve la ultima posicion de ka subcadena buscada, y si no existe devuelve -1.
+
+```javascript
+let string = "I love javascript. If tou do not love javascript what else can you love.";
+
+console.log(string.length);
+console.log(string.lastIndexOf("love"));
+```
+
+#### concat()
+
+El metodo concat() concatena varias subcadenas y las une en una sola cadena.
+
+```javascript
+let string = "30";
+console.log(string.concat("dias","con","javascript"));
+```
+
+#### startsWith() , endsWith()
+
+toma una cadena y verifica si comienza o termina con la subcadena ingresada.
+
+```javascript
+let string = "Hola amigos de git";
+
+console.log(string.starstWith("Hola")); //True
+console.log(string.starstWith("hola")); //False
+
+console.log(string.endsWith("git")); //True
+console.log(string.endsWith("Git")); //False
+```
+
+#### search()
+
+Este metodo tomo el valor de una subcadena como argumento y devuelve el indice de la primera concidencia.
+Recordar que el valor de la busqueda puede ser una cadena o una patron de exprecion regular(**RegExp**),una expresión regular es una secuencia de caracteres que define un patrón de búsqueda
+
+```javascript
+let string = "Hola este es mi primer texto en javascript";
+console.log(string.search("primer")); 
+console.log(string.search("/hola/gi"))
+```
+
+La ultima exprecion /gi, son modificadores que afectan el comportaminieto de la expresion al realizar la busqueda.
+
+* `g` (global): Realiza una búsqueda global en toda la cadena de texto y encuentra todas las coincidencias en lugar de detenerse después de la primera coincidencia.
+* `i` (ignore case): Realiza una búsqueda insensible a mayúsculas y minúsculas, lo que significa que ignora las diferencias entre letras mayúsculas y minúsculas al realizar una coincidencia.
+* `m` (multiline): Cambia el comportamiento del inicio y fin de línea (`^` y `$`) para que coincidan con los límites de línea en lugar de los límites de toda la cadena. Esto es útil cuando se trabaja con cadenas de texto que contienen múltiples líneas.
+* `s` (dotAll): Cambia el comportamiento del metacarácter `.` para que coincida con cualquier carácter, incluidos los caracteres de nueva línea (`\n`). Por defecto, el metacarácter `.` no coincide con los caracteres de nueva línea.
+* `u` (unicode): Habilita el modo unicode para tratar correctamente los caracteres unicode en una cadena de texto.
+* `y` (sticky): Realiza una búsqueda "sticky" que coincide solo con la posición siguiente a la última coincidencia exitosa.
+* `d` (Unicode property escapes): Habilita el uso de escapes de propiedades Unicode en una expresión regular.
+
+#### repeat()
+
+Toma un numero como argumento y devuelve una cadena repetida por el numero ingresado.
+
+```javascript
+let string = "hola"
+console.log(string.repeat(3)); //holaholahola
+```
+
+### Comprobar el tipo de dato
+
+Para saber que tipo de dato que estamos utilizando, usaremo el metodo typeof.
+
+```javascript
+let string = "Hola mundo";
+console.log(typeof string);
+
+let numero = 12;
+console.log(typeof numero);
+
+```
+
+### Cambio del tipo de datos
+
+- Casting: el lenjuage de js nos proporciana varios metodo para ponder convertir un tipo de dato a otro.
+  - Cadena a Int
+    Podemos convertir una cadena en un numero, con los metodo parseInt(), Number o con el operador (+).
+
+    ```javascript
+    let numer = "10";
+    let numInt1 = parseInt(num);
+    console.log(numInt1); // 10
+
+    let numInt2 = Number(num);
+    console.log(numInt2); // 10
+    ```
+  - Cadena a Flotante
+    Podemos convertir valores tipo flotante en cadenas de texto, mediante los metodos parseFloat(), Number o con el signo (+).
+
+    ```javascript
+    let num = 9.32;
+
+    let numFloat1 = parseFloat(num);
+    console.log(numFloat1);
+
+    let numFloat2 = Number(num);
+    console.log(numberFloat2);
+    ```
+  - Flotante a Int
+
+    Para convertir un numero de float a int, solo hay existe el metodo parseInt.
+  - ```javascript
+    let num = 9.4;
+    let numInt = parseInt(num);
+
+    console.log(numInt);
+    ```
 
 ### Numerico
 
-Los datos de tipo numerico son todos lo numero que nos podamos imaginar, tanto enteros como valores decimales, este tipo de dato acepta opraciones matematicas.2.
+Los datos de tipo numerico son todos lo numero que nos podamos imaginar, tanto enteros como valores decimales, este tipo de dato acepta opraciones matematicas.
 
 ```javascript
 mi_numero = 133
@@ -189,13 +413,14 @@ los casos de tipos de especiales son:
 
 ## Tipos de Datos no Primitivos
 
-Los Datos no Primitivos son:
+Los datos no primitivos no almacenan un valor directamente, sino que contienen referencias a otros valores o variables; algunos ejemplos de datos no primitivos son :
 
-- Objetos
-- Funciones
-- Matrices
+- Objetos (Object)
+- Arreglos (Array)
+- Funciones (Funtions)
+- Fechas (Dates)
 
-Los tipos de datos primitivos son modificables o mutables, como por ejemplo creamos una matriz de numeros y depues podemos modificar alguno de sus valores; recordar que una matriz en js no solo puede contener un solo tipo de dato sino tambien puede contener diferente tipos de datos, y para acceder a cualquier dato de una matriz se realizara mediante su indice de ubicacion que comeinza desde el cero.
+Los tipos de datos no primitivos son modificables o mutables, como por ejemplo creamos una matriz de numeros y depues podemos modificar alguno de sus valores; recordar que una matriz en js no solo puede contener un solo tipo de dato sino tambien puede contener diferente tipos de datos, y para acceder a cualquier dato de una matriz se realizara mediante su indice de ubicacion que comeinza desde el cero.
 
 ```javascript
 let numeros = [1, 2, 3, "cuatro"];
